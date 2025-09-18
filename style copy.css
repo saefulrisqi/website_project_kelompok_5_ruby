@@ -1,0 +1,133 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Warna utama */
+:root {
+    --red: #e63946;
+    --dark-red: #d62828;
+    --light-grey: #f1f1f1;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background-color: var(--red);
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Hero */
+#hero {
+    background-color: var(--light-grey);
+    padding: 80px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero span {
+    color: var(--red);
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    color: var(--dark-red);
+    margin-bottom: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    background-color: #fceaea;
+    border-left: 5px solid var(--red);
+    padding: 15px;
+    flex: 1 1 45%;
+}
+
+/* Contact */
+#contact a {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--red);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        float: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .projects {
+        flex-direction: column;
+    }
+}
