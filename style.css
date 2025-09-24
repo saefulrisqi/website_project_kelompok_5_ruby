@@ -1,4 +1,15 @@
-/* Reset */
+/* Flex container for logo and text */
+.logo-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+/* Logo Ruby kecil */
+.logo-ruby {
+    height: 24px;
+    width: auto;
+    vertical-align: middle;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,128 +17,109 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    background: #000000;
+    color: #222;
     line-height: 1.6;
-    background-color: #fff;
-    color: #333;
 }
 
-/* Warna utama */
-:root {
-    --red: #e63946;
-    --dark-red: #d62828;
-    --light-grey: #f1f1f1;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-/* Header */
 header {
-    background-color: var(--red);
+    background-color: #800000;
     color: white;
-    padding: 20px 0;
+    padding: 1rem;
+    
 }
 
-header h1 {
-    float: left;
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 5%;
+  }
+  
+   .logo img {
+     width: 5px;
+     margin-right: 8px;
+     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
-nav {
-    float: right;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-nav ul li a {
+.navbar nav a {
     color: white;
     text-decoration: none;
+    margin-left: 1rem;
     font-weight: bold;
 }
 
-header::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Hero */
-#hero {
-    background-color: var(--light-grey);
-    padding: 80px 0;
+.hero {
     text-align: center;
+    /* background removed */
+    padding: 4rem 2rem;
+    color: white;
+    min-height: 300px;
 }
 
-#hero h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+.hero button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #800000;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-#hero span {
-    color: var(--red);
-}
-
-/* Sections */
-section {
-    padding: 60px 0;
-}
-
-h2 {
-    color: var(--dark-red);
-    margin-bottom: 20px;
-}
-
-.projects {
+.buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem;
+    /* background removed */
+    min-height: 100px;
 }
 
-.project {
-    background-color: #fceaea;
-    border-left: 5px solid var(--red);
-    padding: 15px;
-    flex: 1 1 45%;
+.button-box {
+    background-color: #dc3545;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    font-weight: bold;
 }
 
-/* Contact */
-#contact a {
-    color: var(--red);
-    text-decoration: underline;
+.content {
+    padding: 2rem;
+    background: url('WhatsApp Image 2025-09-20 at 18.15.44_59b138fc.jpg') no-repeat center;
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
 }
 
-/* Footer */
+.content h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #800000;
+    font-size: 1.8rem;
+}
+
+article {
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: 1rem;
+    border-left: 5px solid #800000;
+}
+
 footer {
-    background-color: var(--red);
+    background-color: #222;
     color: white;
     text-align: center;
-    padding: 20px 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    nav ul {
-        float: none;
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .projects {
-        flex-direction: column;
-    }
+    padding: 1rem;
+    margin-top: 2rem;
 }
