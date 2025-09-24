@@ -12,18 +12,18 @@ Website tugas ospek jurusan, dibuat dengan HTML, CSS, dan JavaScript.
 - **Anggota**: coding fitur sesuai task
 
 ## 👥 Anggota Tim
--**Mentor**: Kang Dimas Rizqia 
--**Kelompok Ruby**: 
-E1 -
-E2 -
-E3
-E4
-E5
-E6
-E7
-E8
-E9
-E10
+- **Mentor**: Kang Dimas Rizqia 
+- **Kelompok Ruby**: 
+    - E1 -
+    - E2 -
+    - E3
+    - E4
+    - E5
+    - E6
+    - E7
+    - E8
+    - E9
+    - E10
 
 ## 🔀 Workflow Git
 1. Clone repo: `git clone <URL>`

@@ -1,125 +1,937 @@
-/* Flex container for logo and text */
-.logo-bar {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-/* Logo Ruby kecil */
-.logo-ruby {
-    height: 24px;
-    width: auto;
-    vertical-align: middle;
-}
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #000000;
-    color: #222;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
 }
 
-header {
-    background-color: #800000;
-    color: white;
-    padding: 1rem;
-    
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    padding: 5%;
-  }
-  
-   .logo img {
-     width: 5px;
-     margin-right: 8px;
-     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
-}
-
-
+/* Navigation */
 .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #530F0F;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
 }
 
-.navbar nav a {
+.nav-logo h2 {
     color: white;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
     text-decoration: none;
-    margin-left: 1rem;
-    font-weight: bold;
-}
-
-.hero {
-    text-align: center;
-    /* background removed */
-    padding: 4rem 2rem;
     color: white;
-    min-height: 300px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
 }
 
-.hero button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    color: #800000;
-    border: none;
-    font-weight: bold;
+.nav-link:hover {
+    color: #fbbf24;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
     cursor: pointer;
 }
 
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem;
-    gap: 1rem;
-    /* background removed */
-    min-height: 100px;
-}
-
-.button-box {
-    background-color: #dc3545;
-    color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 250px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.content {
-    padding: 2rem;
-    background: url('WhatsApp Image 2025-09-20 at 18.15.44_59b138fc.jpg') no-repeat center;
-    background-size: cover;
-    background-position: center;
-    min-height: 300px;
-}
-
-.content h3 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #800000;
-    font-size: 1.8rem;
-}
-
-article {
-    margin-bottom: 2rem;
+.bar {
+    width: 25px;
+    height: 3px;
     background-color: white;
-    padding: 1rem;
-    border-left: 5px solid #800000;
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
-footer {
-    background-color: #222;
+/* Hero Carousel Section */
+.hero-carousel {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.slide-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(83, 15, 15, 0.7), rgba(83, 15, 15, 0.3));
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 80px 60px;
+}
+
+.hero-content {
     color: white;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.hero-attribution {
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: block;
+    margin-top: 1rem;
+}
+
+.team-cheer {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fbbf24;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+.carousel-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    z-index: 10;
+}
+
+.arrow-left,
+.arrow-right {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Speaker Profile Section */
+.speaker-profile {
+    padding: 80px 0;
+    background: white;
+    position: relative;
+}
+
+.speaker-profile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, #530F0F, #7a1a1a);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+}
+
+.speaker-photo {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(83, 15, 15, 0.2);
+}
+
+.profile-text {
+    padding: 2rem 0;
+}
+
+.profile-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #530F0F;
+    margin-bottom: 1.5rem;
+}
+
+.profile-description {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.profile-quote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #530F0F;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-left: 4px solid #530F0F;
+    padding-left: 1rem;
+}
+
+.profile-attribution {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.profile-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: #530F0F;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #7a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(83, 15, 15, 0.3);
+}
+
+/* Ekspektasi Section */
+.ekspektasi {
+    padding: 80px 0;
+    background: #f8f9fa;
+    position: relative;
+}
+
+.ekspektasi::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, #530F0F, #7a1a1a);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* Make the red accent wider for Wahyu Memandu Ilmu to cover all text */
+#wahyu-memandu-ilmu::before {
+    width: 55%;
+}
+
+/* Match wider accent for Keinformatikaan */
+#keinformatikaan::before {
+    width: 55%;
+}
+
+.ekspektasi-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.ekspektasi-text {
+    padding: 2rem 0;
+}
+
+.ekspektasi-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #530F0F;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.ekspektasi-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: #530F0F;
+}
+
+.ekspektasi-description {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.ekspektasi-attribution {
+    color: #666;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.ekspektasi-image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.ekspektasi-photo {
+    width: 300x;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(83, 15, 15, 0.2);
+}
+
+.ekspektasi-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Ruby History Section */
+.ruby-history {
+    padding: 80px 0;
+    background: white;
+    position: relative;
+}
+
+.ruby-history::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, #530F0F, #7a1a1a);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.history-image {
+    display: flex;
+    justify-content: center;
+}
+
+.history-photo {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(83, 15, 15, 0.2);
+}
+
+.history-text {
+    padding: 2rem 0;
+}
+
+.history-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #530F0F;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.history-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: #530F0F;
+}
+
+.history-description {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.history-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Team Profile Section */
+.team-profile {
+    padding: 80px 0;
+    background: #530F0F;
+    color: white;
+}
+
+.team-header {
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.team-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.team-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.team-photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.team-photo {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.team-photo img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: #530F0F;
+    transition: transform 0.3s ease;
+}
+
+/* Make the main profile photo (Kang Dimas) larger */
+.team-photo.main-photo img {
+    height: 360px;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .team-photo.main-photo img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 500px) {
+    .team-photo.main-photo img {
+        height: 5000px;
+    }
+}
+
+/* Match the trophy (foto bocah) image scale to main photo */
+.team-photo.trophy-photo img {
+    height: 360px;
+}
+
+@media (max-width: 768px) {
+    .team-photo.trophy-photo img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-photo.trophy-photo img {
+        height: 260px;
+    }
+}
+
+.team-photo:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay button on team photos */
+.overlay-button {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    z-index: 3;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+    background: rgba(83, 15, 15, 0.9);
+}
+
+.team-photo.trophy-photo .overlay-button {
+    left: 16px;
+    bottom: 16px;
+}
+
+/* Background label text behind Kang Dimas image, above section background */
+.team-photo.main-photo::before {
+    content: 'MENTOR';
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.08);
+    z-index: 1;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.team-photo.main-photo::after {
+    content: 'Kang Dimas';
+    position: absolute;
+    left: 24px;
+    bottom: 16px;
+    font-size: 28px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.22);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.main-photo {
+    grid-column: span 2;
+}
+
+.trophy-photo {
+    grid-column: span 2;
+}
+
+.group-photo {
+    grid-column: span 2;
+}
+
+.individual-photos {
+    grid-column: span 8;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.team-button {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    font-size: 1.1rem;
+    padding: 18px 40px;
+}
+
+/* Footer */
+.footer {
+    background: #530F0F;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.team-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.team-column p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.hashtags p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ruby-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.ruby-gem {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.page-number {
+    font-size: 1.2rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #530F0F;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-overlay {
+        padding: 0 0 40px 20px;
+    }
+
+    .profile-content,
+    .ekspektasi-content,
+    .history-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .team-photos {
+        grid-template-columns: 4fr;
+    }
+
+    .main-photo,
+    .trophy-photo,
+    .group-photo,
+    .individual-photos {
+        grid-column: span 6;
+    }
+
+    .individual-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .team-list {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-arrows {
+        padding: 0 15px;
+    }
+    
+    .arrow-left,
+    .arrow-right {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .carousel-indicators {
+        bottom: 20px;
+    }
+    
+    .hero-overlay {
+        padding: 0 0 40px 20px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .team-title {
+        font-size: 2.5rem;
+    }
+
+    .profile-title,
+    .ekspektasi-title,
+    .history-title {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Smooth scrolling and animations */
+@media (prefers-reduced-motion: no-preference) {
+    .team-photo,
+    .profile-content,
+    .ekspektasi-content,
+    .history-content {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .team-photo:nth-child(1) { animation-delay: 0.1s; }
+    .team-photo:nth-child(2) { animation-delay: 0.2s; }
+    .team-photo:nth-child(3) { animation-delay: 0.3s; }
+    .team-photo:nth-child(4) { animation-delay: 0.4s; }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading states and micro-interactions */
+.btn:active {
+    transform: translateY(1px);
+}
+
+.nav-link:active {
+    color: #fbbf24;
+}
+
+/* Focus states for accessibility */
+.btn:focus,
+.nav-link:focus {
+    outline: 2px solid #fbbf24;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .hero-overlay {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    }
+    
+    .profile-content::before,
+    .ekspektasi::before,
+    .ruby-history::before {
+        background: #530F0F;
+        opacity: 0.2;
+    }
 }

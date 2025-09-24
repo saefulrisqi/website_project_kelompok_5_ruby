@@ -3,77 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Ruby</title>
+    <title>Kelompok Ruby - MONITOR 2025</title>
 
-    <!-- CSS Stylesheet -->
+    <!-- StyleSheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Font Lib -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Library -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-      <!-- Navigation Bar -->
-        <div class="container">
-            <img src="ruby.png" alt="Logo Ruby" class="logo-ruby">
-            <h1 style="display: inline-block; vertical-align: middle; margin-left: 10px;">Ruby</h1>
-            <nav>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="materi.html">Materi</a></li>
-                    <li><a href="#portfolio">About</a></li>
-                    <li><a href="#contact">Profile</a></li>
-                </ul>
-            </nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>KELOMPOK RUBY</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#materi" class="nav-link">Materi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#profile" class="nav-link">Profile</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <h2>Halo, saya <span>Nama Kamu</span></h2>
-            <p>Seorang Web Developer & Desainer</p>
+    <!-- Hero Carousel Section -->
+    <section id="home" class="hero-carousel">
+        <div class="carousel-container">
+            <!-- Slide 1: Stadium Generale -->
+            <div class="carousel-slide active" data-slide="0">
+                <div class="slide-background">
+                    <img src="asset/img/stadium.svg" alt="Stadium Generale Event" class="hero-image">
+                </div>
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1 class="hero-title">STADIUM GENERALE</h1>
+                        <p class="hero-description">Membentuk mahasiswa teknik informatika yang SAKTI dan berdaya saing dalam menjawab disrupsi digital di era society 5.0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Ekspektasi -->
+            <div class="carousel-slide" data-slide="1">
+                <div class="slide-background">
+                    <img src="asset/img/IMG20250913143000 1.svg" alt="Ekspektasi Event" class="hero-image">
+                </div>
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1 class="hero-title">EKSPEKTASI</h1>
+                        <p class="hero-description">Harapan/keinginan para peserta MONITOR 2025 ketika selesai mengikuti acara</p>
+                        <cite class="hero-attribution">-Diman Faturahman</cite>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Yukihiro (Ruby History) -->
+            <div class="carousel-slide" data-slide="2">
+                <div class="slide-background">
+                    <img src="asset/img/Group 41.svg" alt="Ruby Programming History" class="hero-image">
+                </div>
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1 class="hero-title">SEJARAH BAHASA PEMROGRAMAN RUBY</h1>
+                        <p class="hero-description">Ruby dikenal karena sintaksnya yang sederhana, elegan, dan mudah dibaca, sehingga cocok untuk pemula maupun profesional</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Profile Kelompok -->
+            <div class="carousel-slide" data-slide="3">
+                <div class="slide-background">
+                    <img src="asset/img/profil brg.svg" alt="Team Profile" class="hero-image">
+                </div>
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1 class="hero-title">PROFIL KELOMPOK RUBY</h1>
+                        <p class="hero-description">Profil Mentor dan Anggota Kelompok Ruby</p>
+                        <div class="team-cheer">Ruby rubyy rubyyy go! ruby ruby rubyy go! ruby ruby rubyyy.. GO GO GO!! YEAHH!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Navigation -->
+            <div class="carousel-arrows">
+                <button class="arrow-left" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+                <button class="arrow-right" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
+                <button class="indicator" data-slide="3"></button>
+            </div>
         </div>
     </section>
-
-    <!-- About Ruby -->
-    <section id="about">
+    <!-- Ruby Programming History Section -->
+    <section class="ruby-history">
         <div class="container">
-            <h2>Tentang Saya</h2>
-            <p>Saya adalah seorang pengembang web yang berfokus pada pembuatan website modern, responsif, dan user-friendly. Dengan pengalaman di bidang front-end development, saya siap membantu mewujudkan ide Anda ke dalam bentuk digital.</p>
-        </div>
-    </section>
-
-    <!-- Rangkuman Materi -->
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portofolio</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3>Proyek 1</h3>
-                    <p>Deskripsi singkat tentang proyek pertama.</p>
+            <div class="history-content">
+                <div class="history-image">
+                    <img src="asset/img/yukiro2-removebg-preview 2222.svg" alt="Ruby Creator" class="history-photo">
                 </div>
-                <div class="project">
-                    <h3>Proyek 2</h3>
-                    <p>Deskripsi singkat tentang proyek kedua.</p>
+                <div class="history-text">
+                    <h2 class="history-title">SEJARAH BAHASA PEMROGRAMAN RUBY</h2>
+                    <p class="history-description">Ruby dikenal karena sintaksnya yang sederhana, elegan, dan mudah dibaca, sehingga cocok untuk pemula maupun profesional.</p>
+                    <div class="history-buttons">
+                        <button class="btn btn-primary">Sejarah <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-primary">Profil Pencipta <i class="fas fa-arrow-right"></i></button>
+                    </div>
                 </div>
-                <!-- Tambahkan lebih banyak proyek jika perlu -->
             </div>
         </div>
     </section>
 
-    <!-- RUBY TEAM!! -->
-    <section id="contact">
+    <!-- Stadium Generale Speaker Profile -->
+    <section id="materi" class="speaker-profile">
         <div class="container">
-            <h2>Kontak</h2>
-            <p>Silakan hubungi saya melalui email di <a href="mailto:kamu@email.com">kamu@email.com</a></p>
+            <div class="profile-content">
+                <div class="profile-image">
+                    <img src="asset/img/BU_DIAN_1-removebg-preview.png" alt="Dr. Dian Sa'dillah Haylawati" class="speaker-photo">
+                </div>
+                <div class="profile-text">
+                    <h2 class="profile-title">STADIUM GENERALE</h2>
+                    <p class="profile-description">Membentuk mahasiswa teknik informatika yang SAKTI dan berdaya saing dalam menjawab disrupsi digital di era society 5.0</p>
+                    <blockquote class="profile-quote">"Pintar itu bonus, Kerja keras itu harus"</blockquote>
+                    <cite class="profile-attribution">-Dr. Dian Sa'dillah Haylawati, S.Kom, M.T., Ph.D</cite>
+                    <div class="profile-buttons">
+                        <button class="btn btn-primary">Materi <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-primary">Profil Pemateri <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Ekspektasi Section -->
+    <section class="ekspektasi">
         <div class="container">
-            <p>&copy; 2025 Nama Kamu. Semua hak dilindungi.</p>
+            <div class="ekspektasi-content">
+                <div class="ekspektasi-text">
+                    <h2 class="ekspektasi-title">EKSPEKTASI</h2>
+                    <p class="ekspektasi-description">Harapan/keinginan para peserta MONITOR 2025 ketika selesai mengikuti acara</p>
+                    <cite class="ekspektasi-attribution">-Diman Faturahman</cite>
+                </div>
+                <div class="ekspektasi-image-section">
+                    <img src="asset/img/kang diman.png" alt="Diman Faturahman" class="ekspektasi-photo">
+                    <div class="ekspektasi-buttons">
+                        <button class="btn btn-primary">Materi <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-primary">Profil Pemateri <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Additional Lecture Topics -->
+    <section class="ekspektasi" id="wahyu-memandu-ilmu">
+        <div class="container">
+            <div class="ekspektasi-content">
+                <div class="ekspektasi-text">
+                    <h2 class="ekspektasi-title">WAHYU MEMANDU ILMU</h2>
+                    <p class="ekspektasi-description">by Pak Cepy Slamet S.T, M.T, PH.D</p>
+                    <div class="ekspektasi-description">
+                        <p><strong>Ketua jurusan teknik informatika tahun 2019-2023</strong></p>
+                        <p>Relevansi mata kuliah keagamaan dengan jurusan teknik informatika</p>
+                        <p>Roda kesuksesan paradigma SKS</p>
+                        <p>Tiga Dimensi Syukur Imam Al Ghazali</p>
+                    </div>
+                    <div class="ekspektasi-buttons">
+                        <button class="btn btn-primary">Materi <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-primary">Profil Pemateri <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="ekspektasi-image-section">
+                    <img src="asset/img/stadium.svg" alt="Pak Cepy Slamet - Wahyu Memandu Ilmu" class="ekspektasi-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="speaker-profile" id="pengantar-logika">
+        <div class="container">
+            <div class="profile-content">
+                <div class="profile-image">
+                    <img src="asset/img/IMG20250913143000 1.svg" alt="Diaz Muhammad Akbar - Pengantar Logika" class="speaker-photo">
+                </div>
+                <div class="profile-text">
+                    <h2 class="profile-title">PENGANTAR LOGIKA</h2>
+                    <p class="profile-description">by Diaz Muhammad Akbar</p>
+                    <div class="profile-description">
+                        <p>Sistematika berfikir</p>
+                        <p>Kesalahan Logika Berfikir</p>
+                    </div>
+                    <div class="profile-buttons">
+                        <button class="btn btn-primary">Materi <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-primary">Profil Pemateri <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ekspektasi" id="keinformatikaan">
+        <div class="container">
+            <div class="ekspektasi-content">
+                <div class="ekspektasi-text">
+                    <h2 class="ekspektasi-title">KEINFORMATIKAAN</h2>
+                    <p class="ekspektasi-description">by Fatih Maulana</p>
+                    <div class="ekspektasi-description">
+                        <p>Peminataan Informatika yang dapat dipilih para mahasiswa</p>
+                        <p>Tantangan sebagai mahasiswa baru</p>
+                        <p>Pentingnya dan cara menemukan tujuan hidup</p>
+                    </div>
+                    <div class="ekspektasi-buttons">
+                        <button class="btn btn-primary">Materi <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-primary">Profil Pemateri <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="ekspektasi-image-section">
+                    <img src="asset/img/Group 41.svg" alt="Fatih Maulana - Keinformatikaan" class="ekspektasi-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Profile Section -->
+    <section id="profile" class="team-profile">
+        <div class="container">
+            <div class="team-header">
+                <h2 class="team-title">PROFIL</h2>
+                <h3 class="team-subtitle">Kelompok Ruby</h3>
+            </div>
+            <div class="team-photos">
+                <div class="team-photo main-photo">
+                    <img src="asset/img/KANG_DIMAS-removebg-preview.png" alt="Team Member 1">
+                    <button class="btn btn-primary overlay-button">MENTOR : KANG DIMAS RIZQIA HIDAYAT</button>
+                </div>
+                <div class="team-photo trophy-photo">
+                    <img src="asset/img/foto bocah.svg" alt="Team Member with Trophy">
+                    <button class="btn btn-primary overlay-button">ANGGOTA RUBY</button>
+                </div>
+            </div>
+            <button class="btn btn-primary team-button">PROFIL <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-title">KELOMPOK RUBY</h3>
+                    <div class="team-list">
+                        <div class="team-column">
+                            <p>Kang Dimas Rizqia Hidayat</p>
+                            <p>Muhamad Fahad Aufal Akbar (E1)</p>
+                            <p>Saeful Rizal (E2)</p>
+                            <p>Fathan Syahila Hariel (E3)</p>
+                            <p>Ana Meylani Fayza (E4)</p>
+                            <p>Ratna Reviana Aprianti (D5)</p>
+                        </div>
+                        <div class="team-column">
+                            <p>Saksa Selfie Andina (E6)</p>
+                            <p>Alfian Abdul Basit (E7)</p>
+                            <p>Nindi Salwa Afrina (E8)</p>
+                            <p>Halim Fatur Rahman (E9)</p>
+                            <p>Siti Mutya Zahrani (E10)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="hashtags">
+                        <p>#MONITOR2K25</p>
+                        <p>#SayaSiapjadiWargiIf</p>
+                        <p>#HIMATIFUINBANDUNG</p>
+                        <p>#DIGIMATEWITHBASKARABHAVANA</p>
+                        <p>#KabinetBasharabhava</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="ruby-logo">
+                    <img src="asset/img/logoo rubyy.svg" alt="Ruby Logo" class="ruby-gem">
+                </div>
+                <p class="page-number">1</p>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
