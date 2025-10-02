@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATERI - WAHYU MEMANDU ILMU</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root { --primary:#a90714; --dark:#1a1a1a; --light:#ffffff; --muted:#e6e6e6; }
+        * { box-sizing: border-box; }
+        body { margin:0; font-family: Arial, Helvetica, sans-serif; color:#222; background:#fafafa; }
+        /* Navbar */
+        .navbar { position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:10px 20px; background:rgba(26,26,26,.9); color:#fff; }
+        .navbar .brand { display:flex; align-items:center; gap:10px; }
+        .navbar .brand img { height:30px; width:auto; }
+        .navbar a { color:#fff; text-decoration:none; margin-left:16px; font-weight:600; }
+        /* Hero */
+        .hero { position:relative; background:url('asset/img/IMG20250913143000 1.svg') center/cover no-repeat; height:300px; display:flex; align-items:flex-end; }
+        .hero::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.4)); }
+        .hero-inner { position:relative; z-index:1; width:100%; padding:30px 20px; color:#fff; }
+        .hero-title { font-size:44px; line-height:1; font-weight:900; letter-spacing:2px; text-transform:uppercase; text-shadow:0 3px 12px rgba(0,0,0,.5); }
+        .hero-sub { margin-top:12px; font-weight:700; letter-spacing:.5px; }
+        .hero-cta { margin-top:16px; display:inline-block; background:var(--primary); color:#fff; border:none; padding:10px 16px; border-radius:6px; font-weight:700; cursor:pointer; }
+        /* Section titles ribbon */
+        .ribbons { display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; padding:18px 20px; background:linear-gradient(180deg, #fff, #f2f2f2); }
+        .ribbon { background:var(--primary); color:#fff; padding:12px 14px; border-radius:8px; font-weight:800; text-transform:uppercase; text-align:center; box-shadow:0 6px 0 #740610; }
+        /* Main content */
+        .container { max-width:1100px; margin:0 auto; padding:24px 20px; }
+        .top-block { display:grid; grid-template-columns:1fr 280px 1fr; gap:18px; align-items:center; }
+        .speaker-illus { width:100%; height:auto; }
+        .card { background:#fff; border-radius:14px; padding:18px; box-shadow:0 6px 22px rgba(0,0,0,.08); border:1px solid #eee; }
+        .card h3 { margin:0 0 10px; text-transform:uppercase; letter-spacing:1px; }
+        .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
+        .muted { color:#555; }
+        /* Lists */
+        ul { margin:8px 0 0 18px; }
+        li { margin:6px 0; }
+        /* Footer */
+        .footer { margin-top:30px; background:#200b0b; color:#fff; }
+        .footer-inner { max-width:1100px; margin:0 auto; padding:24px 20px; }
+        .credits { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; border-top:1px solid rgba(255,255,255,.15); margin-top:16px; padding-top:16px; }
+        .team { display:grid; grid-template-columns:repeat(2, minmax(220px, 1fr)); gap:6px 20px; }
+        .lecturer { display:grid; grid-template-columns:130px 1fr; gap:16px; align-items:end; }
+        .lecturer img { width:130px; height:auto; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,.25); }
+        /* Responsive */
+        @media (max-width:900px){ .top-block{ grid-template-columns:1fr; } .grid-2{ grid-template-columns:1fr; } .ribbons{ grid-template-columns:1fr 1fr; } .hero{ height:240px; } .hero-title{ font-size:34px; } }
+    </style>
+    <link rel="preload" as="image" href="asset/img/pak cepy banyakan.jpg">
+    <link rel="preload" as="image" href="asset/img/pak cepy banyakan.jpg">
+    <link rel="preload" as="image" href="asset/img/pak cepy banyakan.jpg">
+    <link rel="preload" as="image" href="asset/icon/logo ruby.png">
+    <meta name="description" content="Stadium Generale Teknik Informatika UIN Sunan Gunung Djati Bandung">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">
+            <img src="asset/icon/logo ruby.png" alt="Logo Ruby">
+            <strong>KELOMPOK RUBY</strong>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="materi.html">Materi</a>
+            <a href="#about">About</a>
+            <a href="#profile">Profile</a>
+        </nav>
+    </header>
+
+    <section class="hero" role="banner">
+        <div class="hero-inner container">
+            <div class="hero-title">WAHYU<br>MEMANDU ILMU</div>
+            <div class="hero-sub">Dr. Cepy Slamet S.T, M.Kom, Ph.D</div>
+            <button class="hero-cta" onclick="window.scrollTo({top:document.getElementById('pemateri').offsetTop-80,behavior:'smooth'})">Profil Pemateri</button>
+        </div>
+    </section>
+
+    <div class="ribbons">
+        <div class="ribbon">Definisi Wahyu Memandu Ilmu</div>
+        <div class="ribbon">Paradigma 3 SKS</div>
+        <div class="ribbon">Syukur Menurut Imam Ghazali</div>
+        <div class="ribbon">4 Hal</div>
+    </div>
+
+    <main class="container">
+        <div class="top-block">
+            <div class="card">
+                <h3>Definisi Wahyu Memandu Ilmu</h3>
+                <p class="muted">Wahyu Memandu Ilmu Adalah</p>
+                <p>Semua Gerakan Keilmuan Di UIN SUNAN GUNUNG DJATI BANDUNG Berdasarkan Alquran Dan Al Hadits</p>
+                <p></p>
+            </div>
+
+           
+            <div class="card">
+                <h3>Paradigma 3 SKS</h3>
+                <li>SABAR</li>
+                <li>KOMITEN</li>
+                <li>SYUKUR</li>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <section class="card">
+                <h3>SYUKUR MENURUT IMAM GHAZALI</h3>
+                <ul>
+                    <li>Ilmu : Selalu Mencari Ilmu Kapanpun, Dimanapun. </li>
+                    <li>Hal : Mensyukuri Segala Sesuatu Yang Terjadi Di Hidup Kita Meskipun Itu Buruk Atau Baik Bagi Kita </li>
+                    <li>Amal : Mengamalkan Ilmu Yang Kita Telah Pelajari, Mengimplementasikan Di Kehidupan Kita</li>
+                    
+                </ul>
+            </section>
+
+            <section class="card">
+                <h3>4 HAL</h3>
+                <ul>
+                    <li>Pengendalian Diri</li>
+                    <li>Ketekunan</li>
+                    <li>Semangat dan Pantang Menyeragh</li>
+                    <li>Motivasi</li>
+                    
+                </ul>
+            </section>
+        </div>
+
+        <section id="pemateri" class="card" style="margin-top:18px;">
+            <div class="lecturer">
+                <img src="asset/img/Pak Cepy.png" alt="Foto Pemateri">
+                <div>
+                    <h2 style="margin:0 0 6px;">Dr. Cepy Slamet S.T, M.Kom, Ph.D</h2>
+                    <div class="muted" style="margin-bottom:10px;">Wakil Dekan 2 Fakultas Saintek</div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div><strong>KELOMPOK RUBY</strong></div>
+            <div class="team">
+                <div>
+                    Kang Dimas Rizqia Hidayat<br>
+                    Muhammad Fahd Aufal Akbar (E1)<br>
+                    Saeful Rizqi (E2)<br>
+                    Fahham Syauqi Hanel (E3)<br>
+                    Ana Meyjani Fauza (E4)<br>
+                    Ratna Revina Apriant (E5)
+                </div>
+                <div>
+                    Salwa Sefia Andina (E6)<br>
+                    Afrina Abdal Basri (E7)<br>
+                    Nindi Salwa Afriana (E8)<br>
+                    Halim Fahtu Rohman (E9)<br>
+                    Siti Mutqia (E10)
+                </div>
+            </div>
+            <div class="credits">
+                <span>#HIMATIFUINBANDUNG #DigitalMilenial</span>
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <img src="asset/icon/Logo IF.png" alt="Logo IF" style="height:22px;">
+                    <img src="asset/icon/Logo Himatif.png" alt="Logo Himatif" style="height:22px;">
+                    <img src="asset/icon/Logo Monitor.png" alt="Logo Monitor" style="height:22px;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
