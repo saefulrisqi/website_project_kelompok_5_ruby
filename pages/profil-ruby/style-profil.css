@@ -6,19 +6,26 @@
     font-family: montserrat, sans-serif;
   }
   
-  /* Header */
+  /* Header home-profile*/
+  
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(179, 0, 0);
-    
+    background: rgba(0, 0, 0, 0); /* transparan */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: none;
+  
   }
   
   .logo {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 30px;
   }
   
    .logo img {
@@ -32,14 +39,15 @@
      line-height: 1;
      letter-spacing: -3px;
      font-size: 14px;
-     color: white;
+     color: rgb(255, 255, 255);
    }
   
   nav {
-    background: #b80000;
-    padding: 10px 10px;
+    padding: 10px;
+    background: transparent;
+    padding-top: 20 px;
   }
-  
+
   nav ul {
     list-style:none;
     margin-right: 50px;
@@ -47,14 +55,80 @@
     display: flex;
     gap: 40px;
   }
+
+   nav ul :hover{
+    transform: scale(1.5);
+    transition: filter 0.3s ease, transform 0.3s ease;
+
+   }
   
   nav ul li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-weight: bold;
+    font-weight:bold;
+    font-size: 20px;
     letter-spacing: -2px;
+    
+  }
+
+   /* Header home-profile-member*/
+    header-member {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #9c0000, #202020);
+    height: 80px;
+  
   }
   
+  .logo-member {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  }
+  
+   .logo-member img {
+     width: 50px;
+     margin-right: 10px;
+     margin-left: 10px;
+     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+   }
+  
+   .text-logo-member {
+     line-height: 1;
+     letter-spacing: -3px;
+     font-size: 14px;
+     color: rgb(255, 255, 255);
+   }
+  
+  navbar {
+    padding: 10px;
+    background: transparent;
+    padding-top: 20 px;
+  }
+
+  navbar ul {
+    list-style:none;
+    margin-right: 50px;
+    margin-left: 10px;
+    display: flex;
+    gap: 40px;
+  }
+
+   navbar ul :hover{
+    transform: scale(1.5);
+    transition: filter 0.3s ease, transform 0.3s ease;
+
+   }
+  
+  navbar ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight:bold;
+    font-size: 20px;
+    letter-spacing: -2px;
+    
+  }
    /* Main */
    main {
      display: flex;
@@ -90,50 +164,52 @@
    
    .card img:hover {
      filter: grayscale(0%);
-     transform: scale(1.5);
+     transform: scale(1.2);
    }
 
    .card img.no-hover-scale:hover {
      transform: none;
+     filter: none;
    }
   
    
-   .hero-section {
-    height: 100vh;
-    width: 100%;
-    
-    background-image: url('asset-profil/icon/logo-monitor.png'); 
-    
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-   }
-  /* Text Overlay */
   .hero-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('asset-profil/png/profile-homepage.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    min-height: 320px;
+    height: 1080px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 80px;
   }
 
   .hero-text-container h1 {
-    font-family: montserrat, sans-serif; /* Font tebal dan besar yang mirip */
+    font-family: montserrat, sans-serif;
     letter-spacing: -13px;
-    font-size: 10vw; /* Ukuran font responsif berdasarkan lebar layar */
-    font-weight: 900;
+    font-size: 10vw; 
+    font-weight: 800;
     color: white;
     margin: 0;
-    line-height: 0.85; /* Mengurangi jarak antar baris (jika teksnya panjang) */
+    line-height: 0.85; 
     text-transform: capitalize;
-    text-align: left;
-
+    text-align:center;
   }
 
+  .logo-home img{
+    height: 200px;
+    position: relative;
+  }
+
+
+  .bg{
+    background-repeat: no-repeat; 
+    background-position: right center; 
+    background-size: 800px auto; 
+    background-attachment: fixed;
+  }
+
+  
   .card .info {
     position: relative;
     left: 5px;
@@ -161,10 +237,11 @@
   .profile-card {
     display: flex;
     align-items: flex-start;
+
     gap: 30px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
+    background: rgba(240, 240, 240, 0.87);
+    border-radius: 50px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 
@@ -200,10 +277,10 @@
 
   /* Footer */
   footer {
-    background: linear-gradient(135deg, #b80000, #8b0000);
+    background: linear-gradient(135deg, #9c0000, #202020);
     color: white;
     padding: 40px 0 20px;
-    margin-top: 0px;
+   
   }
 
   .footer-content {
@@ -305,4 +382,3 @@
       flex: none;
     }
   }
-  
