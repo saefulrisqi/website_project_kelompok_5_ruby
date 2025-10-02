@@ -1,0 +1,339 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Zen Dots', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6a0f14; /* konsisten */
+  padding: 12px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.navbar .logo img {
+  max-height: 52px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px; /* offset navbar */
+  overflow: hidden;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  color: black;
+  text-shadow: 3px 3px 0 white;
+}
+
+.hero-content h1 span {
+  color: #b30000;
+}
+
+.hero-content h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #222;
+}
+
+.btn-profil {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: none;
+  background: #6a0f14;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* ===== PROFIL KETUA JURUSAN ===== */
+.profil-container {
+  display: flex;
+  align-items: flex-start;
+  margin-left :10%;
+  margin-right: 10%; 
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.foto img {
+  width: 150px; /* jangan 700px fixed, lebih responsif */
+  border-radius: 4px;
+}
+
+.info h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+  text-shadow: 2px 2px #5a0a0a;
+  color: #000;
+}
+
+.jabatan {
+  color: #8b0000;
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ===== PENDIDIKAN ===== */
+.pendidikan {
+  margin: 20px 0;
+}
+
+.pendidikan h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.pendidikan ul {
+  list-style: none;
+}
+
+.pendidikan li {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.pendidikan li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+/* ===== KELOMPOK RUBY ===== */
+.kelompok-ruby {
+  background-color: #4b0b0b;
+  color: #fff;
+  padding: 20px;
+}
+
+.kelompok-ruby h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.pembina {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.konten {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 30px;
+  align-items: start;
+}
+
+.logo{
+  height: auto;
+}
+
+.kolom img{
+  height: 50px;
+  justify-items: end;
+}
+
+.kolom p {
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+.hashtags p {
+  color: #fff;
+  font-weight: 700;
+  text-align: right;
+  font-size: 0.9em;
+}
+
+/* ===== EKSPETASI ===== */
+.ekspektasi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 50px;
+}
+
+.character {
+  text-align: center;
+}
+
+.character img {
+  width: 220px;
+}
+
+.character h2 {
+  font-size: 40px;
+  margin-top: 10px;
+  color: #b30000;
+  text-shadow: 3px 3px 0 white;
+}
+
+.character h2 span {
+  color: black;
+}
+
+.bubble {
+  max-width: 200px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #b30000;
+  color: white;
+  font-size: 14px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ===== PENGERTIAN ===== */
+.pengertian {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px 40px;
+  line-height: 1.7;
+}
+
+.pengertian h2 {
+  font-family: 'Zen Dots', sans-serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #111;
+  position: relative;
+  display: inline-block;
+}
+
+.pengertian h2 span {
+  color: #0077cc;
+}
+
+.pengertian h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: #0077cc;
+}
+
+.pengertian p {
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.pengertian .positif-negatif {
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  color: #111;
+}
+
+/* ===== MATERI ===== */
+.materi {
+  width: 100%;
+  margin: auto;
+}
+
+.item {
+  margin: 30px 0;
+}
+
+.item h2 {
+  font-family: 'Zen Dots', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #800000;
+  text-shadow: 1px 1px 2px #00000030;
+}
+
+.item p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Posisi khusus */
+.kanan { text-align: right; }
+.kiri { text-align: left; }
+.tengah { text-align: center; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-icon { display: block; }
+  .navbar .logo img { max-height: 40px; }
+  .ekspektasi { flex-direction: column; gap: 20px; }
+  .hero h1 { font-size: 32px; }
+  .hero-bg { height: 220px; }
+  .profil-container { flex-direction: column; align-items: center; }
+  .foto img { width: 100%; max-width: 350px; }
+}
