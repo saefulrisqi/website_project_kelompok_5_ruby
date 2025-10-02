@@ -1,17 +1,24 @@
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+// Mobile Navigation Toggle (deferred - header may be injected dynamically)
+let hamburger;
+let navMenu;
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', () => {
+    hamburger = document.querySelector('.hamburger');
+    navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    }
 });
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -114,9 +121,28 @@ class HeroCarousel {
     }
 }
 
-// Initialize carousel when DOM is loaded
+function initAll() {
+    // Initialize carousel
+    try {
+        new HeroCarousel();
+    } catch (err) {
+        console.error('Carousel init error:', err);
+    }
+
+    // Any other initialization that depends on DOM/header goes here
+}
+
+// If includes are used, wait until they are loaded. Otherwise init on DOMContentLoaded.
+document.addEventListener('includes:loaded', () => {
+    initAll();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
-    new HeroCarousel();
+    // If includes already dispatched or there are no includes, init immediately
+    // setTimeout 0 to ensure microtask ordering after other listeners
+    setTimeout(() => {
+        if (!window._includesPending) initAll();
+    }, 0);
 });
 
 // Intersection Observer for animations
@@ -359,9 +385,9 @@ window.addEventListener('scroll', debouncedScrollHandler);
 // Add keyboard navigation support
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        // Close mobile menu on escape
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        // Close mobile menu on escape (guarded if elements exist)
+        if (typeof hamburger !== 'undefined' && hamburger) hamburger.classList.remove('active');
+        if (typeof navMenu !== 'undefined' && navMenu) navMenu.classList.remove('active');
     }
 });
 
