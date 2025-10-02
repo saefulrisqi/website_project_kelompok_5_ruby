@@ -102,8 +102,7 @@
     height: 100vh;
     width: 100%;
     
-    /* Baris inilah yang memasang gambar background */
-    background-image: url('asset/homepage.png')r; 
+    background-image: url('asset-profil/icon/logo-monitor.png'); 
     
     background-size: cover;
     background-position: center;
@@ -112,7 +111,7 @@
    }
   /* Text Overlay */
   .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('asset/homepage.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('asset-profil/png/profile-homepage.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
