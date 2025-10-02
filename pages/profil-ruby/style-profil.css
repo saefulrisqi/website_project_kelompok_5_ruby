@@ -1,0 +1,309 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat, sans-serif;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(179, 0, 0);
+    
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+   .logo img {
+     width: 50px;
+     margin-right: 10px;
+     margin-left: 10px;
+     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+   }
+  
+   .text-logo {
+     line-height: 1;
+     letter-spacing: -3px;
+     font-size: 14px;
+     color: white;
+   }
+  
+  nav {
+    background: #b80000;
+    padding: 10px 10px;
+  }
+  
+  nav ul {
+    list-style:none;
+    margin-right: 50px;
+    margin-left: 10px;
+    display: flex;
+    gap: 40px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    letter-spacing: -2px;
+  }
+  
+   /* Main */
+   main {
+     display: flex;
+     justify-content: space-between;
+     align-items: stretch;
+     background: transparent;
+   }
+  
+  .member {
+    display: flex;
+    width: 100%;
+  }
+  
+  .card {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  
+   .card img {
+     width: 400px;
+     height: 400px;
+     margin: 10px;
+     object-fit: cover;
+     object-position: center;
+     filter: grayscale(100%);
+     display: block;
+     transition: filter 0.3s ease, transform 0.3s ease;
+   }
+   
+   .card img:hover {
+     filter: grayscale(0%);
+     transform: scale(1.5);
+   }
+
+   .card img.no-hover-scale:hover {
+     transform: none;
+   }
+  
+   
+   .hero-section {
+    height: 100vh;
+    width: 100%;
+    
+    /* Baris inilah yang memasang gambar background */
+    background-image: url('asset/homepage.png')r; 
+    
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+   }
+  /* Text Overlay */
+  .hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('asset/homepage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-text-container h1 {
+    font-family: montserrat, sans-serif; /* Font tebal dan besar yang mirip */
+    letter-spacing: -13px;
+    font-size: 10vw; /* Ukuran font responsif berdasarkan lebar layar */
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    line-height: 0.85; /* Mengurangi jarak antar baris (jika teksnya panjang) */
+    text-transform: capitalize;
+    text-align: left;
+
+  }
+
+  .card .info {
+    position: relative;
+    left: 5px;
+    letter-spacing: -3px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .card .info h3 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  
+  .card .code {
+    font-size: 80px;
+    letter-spacing: -9px;
+    font-weight: bold;
+    position: static;
+    bottom: 5px;
+    right: 5px;
+    color: rgb(0, 0, 0);
+    opacity: 0.9;
+  }
+
+  /* Profile Card Layout */
+  .profile-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-section {
+    flex: 0 0 auto;
+    position: relative;
+  }
+
+  .detail-section {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .detail-section h2 {
+    color: #b80000;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-bottom: 2px solid #b80000;
+    padding-bottom: 5px;
+  }
+
+  .detail-section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  .detail-section ul li {
+    margin-bottom: 8px;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  /* Footer */
+  footer {
+    background: linear-gradient(135deg, #b80000, #8b0000);
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 0px;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #fff;
+    letter-spacing: -1px;
+  }
+
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+    letter-spacing: -1px;
+  }
+
+  .footer-section p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-section ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-links a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 14px;
+  }
+ 
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    color: #f0f0f0;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      text-align: center;
+    }
+    
+    .social-links {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .profile-card {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-section {
+      flex: none;
+    }
+  }
+  
