@@ -1,3 +1,40 @@
+/* Font Families */
+.navbar, 
+.nav-logo h2,
+.nav-link,
+.hero-title,
+.hero-content h3,
+.profile-title,
+.ekspektasi-title, 
+.history-title,
+.team-title,
+.team-subtitle,
+.footer-title,
+.kelompok-ruby,
+.kelompok-ruby h1,
+.title {
+  font-family: 'Zen Dots', sans-serif;
+}
+
+/* Sisanya pakai Poppins */
+body, 
+p, 
+li, 
+.hero-description, 
+.hero-attribution,
+.profile-description,
+.profile-quote,
+.profile-attribution,
+.ekspektasi-description,
+.ekspektasi-attribution,
+.history-description,
+.btn,
+.team-column p,
+.hashtags p,
+.pembina {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -39,14 +76,32 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 60px;
 }
 
-.nav-logo h2 {
-    color: white;
-    font-weight: 800;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+/* Logo + teks di pojok kiri atas */
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Aturan PENTING: hanya satu aturan .logo img — gunakan max-height */
+.navbar .logo img {
+  display: block;
+  max-height: 32px;
+  /* kecilkan ukuran logo di desktop (ubah sesuai selera) */
+  height: auto;
+  width: auto;
+  margin-right: 8px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #fff;
+  /* semua teks di dalam logo jadi putih */
 }
 
 .nav-menu {
@@ -71,6 +126,19 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+}
+
+/* Hamburger Animation */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .bar {
@@ -422,8 +490,8 @@ body {
 }
 
 .ekspektasi-photo {
-    width: 300x;
-    height: 300px;
+    width: 300px;
+    height: 400px;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(83, 15, 15, 0.2);
@@ -515,7 +583,7 @@ body {
 
 /* Team Profile Section */
 .team-profile {
-    padding: 80px 0;
+    padding-top: 20px;
     background: #530F0F;
     color: white;
 }
@@ -576,7 +644,7 @@ body {
 
 @media (max-width: 500px) {
     .team-photo.main-photo img {
-        height: 5000px;
+        height: 300px;
     }
 }
 
@@ -673,98 +741,64 @@ body {
     padding: 18px 40px;
 }
 
-/* Footer */
-.footer {
-    background: #530F0F;
-    color: white;
-    padding: 60px 0 20px;
+/* ===== Footer Styles ===== */
+.kelompok-ruby {
+    font-family: 'Zen dots', sans-serif;
+    background-color: #4b0b0b;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-.footer-content {
+.kelompok-ruby h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+.pembina {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.konten {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 20px;
 }
 
-.footer-title {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
-    color: white;
-}
-
-.team-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.team-column p {
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-    opacity: 0.9;
-}
-
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.social-media {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
+.kolom p {
+    font-size: 13px;
+    margin: 4px 0;
 }
 
 .hashtags p {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    opacity: 0.8;
+    color: #fff;
 }
 
-.footer-bottom {
+.kelompok-ruby .logo {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    justify-content: center;
 }
 
-.ruby-logo {
-    width: 60px;
-    height: 60px;
+.kelompok-ruby .logo img {
+    height: 120px;
+    width: auto;
 }
 
-.ruby-gem {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
-}
-
-.page-number {
-    font-size: 1.2rem;
-    font-weight: 600;
-    opacity: 0.8;
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .konten {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .kolom {
+        text-align: center;
+    }
 }
 
 /* Responsive Design */
@@ -810,7 +844,13 @@ body {
     }
 
     .team-photos {
-        grid-template-columns: 4fr;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .main-photo,
+    .trophy-photo{
+        grid-column: 1;
     }
 
     .main-photo,
