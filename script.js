@@ -142,21 +142,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Button click handlers for Kelompok Ruby sections
+// Simple navigation dengan data attributes
 document.querySelectorAll('.btn-primary').forEach(button => {
     button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const buttonText = button.textContent.trim();
+        const targetPage = button.getAttribute('data-page');
         
-        // Handle different button actions
-        if (buttonText.includes('Materi')) {
-            showNotification('Materi akan segera tersedia!', 'info');
-        } else if (buttonText.includes('Profil')) {
-            showNotification('Profil akan segera tersedia!', 'info');
-        } else if (buttonText.includes('Sejarah')) {
-            showNotification('Sejarah Ruby akan segera tersedia!', 'info');
-        } else if (buttonText.includes('PROFIL')) {
-            showNotification('Profil tim akan segera tersedia!', 'info');
+        if (targetPage) {
+            window.location.href = targetPage;
+        } else {
+            // Fallback ke notification
+            const buttonText = button.textContent.trim();
+            if (buttonText.includes('Materi') || buttonText.includes('Profil')) {
+                showNotification('Halaman akan segera tersedia!', 'info');
+            }
         }
     });
 });
