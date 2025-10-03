@@ -26,6 +26,10 @@ li {
 }
 
 /* Umum */
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +40,7 @@ body {
   margin: 0;
   background: var(--color-light);
   color: var(--color-dark);
+  
 }
 
 .section {
