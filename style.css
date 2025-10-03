@@ -3,84 +3,75 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+.logo {
+  font-family: 'Zen Dots', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #ffffff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Navigation */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #530F0F;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.nav-logo h2 {
-    color: white;
-    font-weight: 800;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: #fbbf24;
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;   /* atur jarak antar menu */
 }
 
 .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 20px; /* kasih jarak biar gak terlalu nempel */
 }
 
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 3px 0;
-    transition: 0.3s;
-}
+body {
+      margin: 0;
+      font-family: 'Zen Dots', sans-serif;
+      background: #530F0F;
+    }
+    header {
+      background-color: #530F0F; /* warna merah gelap */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      color: white;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      height: 35px; /* sesuaikan ukuran logo */
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 100px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+    nav ul li a.active {
+      font-weight: bold;
+    }
+    .hamburger {
+      font-size: 22px;
+      cursor: pointer;
+      display: block; /* biar selalu kelihatan */
+    }
 
+    /* Responsive */
+    @media (max-width: 768px) {
+
+      .hamburger {
+        display: block;
+      }
+    }
 /* Hero Carousel Section */
 .hero-carousel {
     position: relative;
