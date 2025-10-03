@@ -316,16 +316,8 @@ footer .footer-content { align-items: center; }
   .hero-title { font-size: 20px; }
   .hero-description { font-size: 14px; }
   .team-photos { grid-template-columns: 1fr; }
-}
-
-/* Footer */
-footer { background: #1f1f1f; color: #fff; padding: 20px 0; }
-footer .footer-content { max-width: 1100px; margin: auto; display:flex; gap: 20px; justify-content: space-between; padding: 0 16px; }
-
-/* Buttons */
-.btn { background: #5e0a0a; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
-.btn-primary { background: #7e1111; }
-/* Footer */
+}  
+   /* Footer */
 .footer {
     background: #530F0F;
     color: white;
@@ -394,29 +386,29 @@ footer .footer-content { max-width: 1100px; margin: auto; display:flex; gap: 20p
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: left;
+  justify-content: left; /* kalau mau logo di tengah */
+  gap: 15px; /* jarak antar logo */
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.ruby-logo {
+.footer-bottom img {
+  max-height: 50px; /* opsional, biar ukurannya konsisten */
+}
+
+
+.ruby-logo, .monitor-logo, .himatif_logo, .if-logo, .uin-logo {               
     width: 60px;
     height: 60px;
+    
 }
 
-.ruby-gem {
+.ruby-gem, .monitor-gem, .himatif_gem, .if-gem, .uin-gem {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: brightness(0) invert(1);
-}
-
-.page-number {
-    font-size: 1.2rem;
-    font-weight: 600;
-    opacity: 0.8;
+  
 }
 
 /* Responsive Design */
