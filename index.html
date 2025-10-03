@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Font Library -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <div class="logo">
+                <img src="../asset/icon/logo-ruby.png" alt="Logo Kelompok Ruby">
                 <h2>KELOMPOK RUBY</h2>
             </div>
             <ul class="nav-menu">
@@ -126,7 +127,7 @@
         <div class="container">
             <div class="profile-content">
                 <div class="profile-image">
-                    <img src="asset\img\profil-budian.png" alt="Dr. Dian Sa'dillah Haylawati" class="speaker-photo">
+                    <img src="asset\img\profil-budian2.svg" alt="Dr. Dian Sa'dillah Haylawati" class="speaker-photo">
                 </div>
                 <div class="profile-text">
                     <h2 class="profile-title">STADIUM GENERALE</h2>
@@ -152,13 +153,15 @@
                     <p class="ekspektasi-description">Harapan/keinginan para peserta MONITOR 2025 ketika selesai
                         mengikuti acara</p>
                     <cite class="ekspektasi-attribution">-Diman Faturahman</cite>
-                </div>
-                <div class="ekspektasi-image-section">
-                    <img src="asset\img\profil-diman.png" alt="Diman Faturahman" class="ekspektasi-photo">
-                    <div class="ekspektasi-buttons">
+                    <!-- Buttons moved here -->
+                    <div class="profile-buttons">
                         <button class="btn btn-primary">Materi <i class="fas fa-arrow-right"></i></button>
                         <button class="btn btn-primary">Profil Pemateri <i class="fas fa-arrow-right"></i></button>
                     </div>
+                </div>
+                <div class="ekspektasi-image-section">
+                    <img src="asset\img\profil-diman.png" alt="Diman Faturahman" class="ekspektasi-photo">
+                    <!-- Buttons removed from here -->
                 </div>
             </div>
         </div>
@@ -195,27 +198,32 @@
                     <p><strong>Ketua jurusan teknik informatika tahun 2019-2023</strong></p>
                     </p>
                     <cite class="ekspektasi-attribution">-by Pak Cepy Slamet S.T, M.T, PH.D</cite>
+                    <!-- Buttons moved here -->
+                    <div class="profile-buttons">
+                        <button class="btn btn-primary">Materi <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-primary">Profil Pemateri <i class="fas fa-arrow-right"></i></button>
+                    </div>
                 </div>
                 <div class="ekspektasi-image-section">
                     <img src="asset\img\materi-pacepi.jpg" alt="Pak Cepy Slamet - Wahyu Memandu Ilmu"
                         class="ekspektasi-photo">
-                    <div class="ekspektasi-buttons">
-                        <button class="btn btn-primary">Materi <i class="fas fa-arrow-right"></i></button>
-                        <button class="btn btn-primary">Profil Pemateri <i class="fas fa-arrow-right"></i></button>
-                    </div>
+                    <!-- Buttons removed from here -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- pengantar logika -->
+    <!-- Pengantar Logika -->
     <section class="speaker-profile" id="pengantar-logika">
         <div class="container">
             <div class="profile-content">
+                <!-- Image on LEFT -->
                 <div class="profile-image">
                     <img src="asset\img\materi-logika.jpg" alt="Diaz Muhammad Akbar - Pengantar Logika"
                         class="speaker-photo">
                 </div>
+
+                <!-- Text on RIGHT -->
                 <div class="profile-text">
                     <h2 class="profile-title">PENGANTAR LOGIKA</h2>
                     <p class="profile-description">by Diaz Muhammad Akbar</p>
@@ -236,10 +244,7 @@
     <section class="ekspektasi" id="keinformatikaan">
         <div class="container">
             <div class="ekspektasi-content">
-                <div class="profile-image">
-                    <img src="asset\img\materi-keinformatikaan.jpg" alt="Fatih - Keinformatikaan"
-                        class="speaker-photo">
-                </div>
+                <!-- Text on LEFT -->
                 <div class="ekspektasi-text">
                     <h2 class="ekspektasi-title">KEINFORMATIKAAN</h2>
                     <p class="ekspektasi-description">by Fatih Maulana</p>
@@ -248,87 +253,57 @@
                         <p>Tantangan sebagai mahasiswa baru</p>
                         <p>Pentingnya dan cara menemukan tujuan hidup</p>
                     </div>
-                    <div class="ekspektasi-buttons">
+                    <!-- Buttons moved here -->
+                    <div class="profile-buttons">
                         <button class="btn btn-primary">Materi <i class="fas fa-arrow-right"></i></button>
                         <button class="btn btn-primary">Profil Pemateri <i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
+
+                <!-- Image on RIGHT (buttons removed from here) -->
+                <div class="ekspektasi-image-section">
+                    <img src="/asset/img/materi-keinformatikaan.jpg" alt="Fatih - Keinformatikaan"
+                        class="ekspektasi-photo">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Profile Section -->
-    <section id="profile" class="team-profile">
-    <!-- Team Profile Section -->
-    <section id="profile" class="team-profile">
-        <div class="container">
-            <div class="team-header">
-                <h2 class="team-title">PROFIL</h2>
-                <h3 class="team-subtitle">Kelompok Ruby</h3>
+    <!-- Footer -->
+    <!-- ========== Kelompok Ruby Section ========== -->
+    <section class="kelompok-ruby" id="profil">
+        <h1>KELOMPOK 5 - RUBY</h1>
+        <p class="pembina">Pembina: Kang Dimas Rizqia Hidayat</p>
+
+        <div class="konten">
+            <div class="kolom">
+                <p>Muhamad Fahd Aufal Akbar (E1)</p>
+                <p>Saeful Rizqi (E2)</p>
+                <p>Fathan Syahqila Haniel (E3)</p>
+                <p>Ana Meylani Fayza (E4)</p>
+                <p>Ratna Reviana Aprianti (E5)</p>
             </div>
-            <div class="team-photos">
-                <div class="team-photo main-photo">
-                    <img src="asset\img\profil-dimas.png" alt="Team Member 1">
-                    <button class="btn btn-primary overlay-button">MENTOR : KANG DIMAS RIZQIA HIDAYAT</button>
-                </div>
-                <div class="team-photo trophy-photo">
-                    <img src="asset\img\profil-teamruby.png" alt="Team Member with Trophy">
-                    <button class="btn btn-primary overlay-button">ANGGOTA RUBY</button>
-                </div>
+
+            <div class="kolom">
+                <p>Salwa Selfia Ardina (E6)</p>
+                <p>Alfian Abdul Basit (E7)</p>
+                <p>Nindi Salwa Alfrina (E8)</p>
+                <p>Halim Fatur Rohman (E9)</p>
+                <p>Siti Mutya (E10)</p>
             </div>
-            <button class="btn btn-primary team-button">PROFIL <i class="fas fa-arrow-right"></i></button>
+
+            <div class="kolom hashtags">
+                <p>#MONIT0R2K25</p>
+                <p>#SayaSiapJadiWargiIF</p>
+                <p>#HIMATIFUNBANDUNG</p>
+                <p>#DIGIMATEwithBASKARABHAVANA</p>
+                <p>#KabinetBaskaraBavana</p>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="../asset/icon/logo-footer.png" alt="Logo Kelompok Ruby">
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <h3 class="footer-title">KELOMPOK RUBY</h3>
-                    <div class="team-list">
-                        <div class="team-column">
-                            <p>Kang Dimas Rizqia Hidayat</p>
-                            <p>Muhamad Fahad Aufal Akbar (E1)</p>
-                            <p>Saeful Rizal (E2)</p>
-                            <p>Fathan Syahila Hariel (E3)</p>
-                            <p>Ana Meylani Fayza (E4)</p>
-                            <p>Ratna Reviana Aprianti (D5)</p>
-                        </div>
-                        <div class="team-column">
-                            <p>Saksa Selfie Andina (E6)</p>
-                            <p>Alfian Abdul Basit (E7)</p>
-                            <p>Nindi Salwa Afrina (E8)</p>
-                            <p>Halim Fatur Rahman (E9)</p>
-                            <p>Siti Mutya Zahrani (E10)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-right">
-                    <div class="social-media">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                    </div>
-                    <div class="hashtags">
-                        <p>#MONITOR2K25</p>
-                        <p>#SayaSiapjadiWargiIf</p>
-                        <p>#HIMATIFUINBANDUNG</p>
-                        <p>#DIGIMATEWITHBASKARABHAVANA</p>
-                        <p>#KabinetBasharabhava</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="ruby-logo">
-                    <img src="asset\icon\logo-ruby.png" alt="Ruby Logo" class="ruby-gem">
-                </div>
-            </div>
-        </div>
-    </footer>
     <script src="script.js"></script>
 </body>
 
