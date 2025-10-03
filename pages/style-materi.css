@@ -177,8 +177,8 @@ h1 {
   right: 0;
   bottom: 0;
   background:
-    url("/asset/icon/bg-if1.png") right/350px auto no-repeat,
-    url("/asset/icon/bg-redshdow.png") left/200px auto no-repeat;
+    url("../asset/icon/bg-if1.png") right/350px auto no-repeat,
+    url("../asset/icon/bg-redshdow.png") left/200px auto no-repeat;
   opacity: 0.2;
   z-index: 1;
 }
@@ -322,7 +322,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("/asset/icon/bg-monitorruby.png") left/contain no-repeat;
+  background: url("../asset/icon/bg-monitorruby.png") left/contain no-repeat;
   opacity: 1;
   z-index: 1;
 }
@@ -339,7 +339,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("/asset/icon/bg-if2.png") left/contain no-repeat;
+  background: url("../asset/icon/bg-if2.png") left/contain no-repeat;
   opacity: 0.2;
   z-index: 0;
 }
