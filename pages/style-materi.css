@@ -263,12 +263,12 @@ h1 {
 .hero {
   position: relative;
   height: 100vh;
-  background: url('/asset/img/hero-sg.png') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  /* teks vertikal tengah */
   justify-content: flex-start;
-  /* teks ke kiri */
   padding-left: 80px;
 }
 
